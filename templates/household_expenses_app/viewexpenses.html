@@ -1,0 +1,55 @@
+{% include 'household_expenses_app/index.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock head %}
+
+
+{% block content %}
+    <div class="details">
+        <div class="header">
+            expenses details
+        </div>
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>House_Rent</th>
+                    <th>Milk</th>
+                    <th>Ration</th>
+                    <th>Cable</th>
+                    <th>Sandha</th>
+                    <th>Grocery</th>
+                    <th>Cylinder</th>
+                    <th>Current_Bill</th>
+                    <th>Total_salary</th>
+                    <th>Total_Expenses</th>
+                    <th>Balance_Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for a in expenses_details %}
+                    <tr>
+                        <td>{{a.House_Rent}}</td>
+                        <td>{{a.Milk}}</td>
+                        <td>{{a.Ration}}</td>
+                        <td>{{a.Cable}}</td>
+                        <td>{{a.Sandha}}</td>
+                        <td>{{a.Grocery}}</td>
+                        <td>{{a.Cylinder}}</td>
+                        <td>{{a.Current_Bill}}</td>
+                        <td>{{a.Total_salary}}</td>
+                        <td>{{a.Total_Expenses}}</td>
+                        <td>{{a.Balance_Amount}}</td>
+                        <td>{{a.Date}}</td>
+                    </tr>
+                {% endfor %}
+                    
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
+    

@@ -1,0 +1,26 @@
+{% include 'household_expenses_app/index.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock head %}
+
+
+{% block content %}
+    <div class="add-page">
+        <div class="header">
+            <label>add expenses</label>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="txt-box">
+                {{form.as_p}}
+            </div>
+            <div class="add-btn">
+                <input type="submit" value="add">
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+    

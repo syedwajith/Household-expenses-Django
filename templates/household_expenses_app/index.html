@@ -1,0 +1,46 @@
+{% extends 'household_expenses_app/base.html' %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock head %}
+
+
+{% block content %}
+    <div class="nav-bar">
+        <div class="logo">
+            <label>household expenses</label>
+        </div>
+        <div class="nav-link">
+            <ul>
+                <li>
+                    <a href="/household_expenses_app/">home</a>
+                </li>
+                <li>
+                    <a href="/household_expenses_app/add_expenses">add expenses</a>
+                </li>
+                <li>
+                    <a href="/household_expenses_app/view_expenses">view expences</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    {% if request.path == '/household_expenses_app/' %}
+        <div class="main-page">
+            welcome
+        </div>
+    {% endif %}
+        
+    <div class="msg">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert {{message.tags}}" role="alert">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock content %}
+    

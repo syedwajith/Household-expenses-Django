@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* index.html */
+
+.nav-bar {
+    width: 100vw;
+    height: 10vh;
+    background-color: aqua;
+    display: flex;
+    position: fixed;
+}
+
+.nav-bar .logo {
+    padding-left: 1%;
+    padding-top: 1%;
+    text-transform: uppercase;
+    font-size: 150%;
+    font-weight: bold;
+    color: black;
+    user-select: none;
+}
+
+.nav-link {
+   margin-left: 48%;
+   margin-top: 2%;
+}
+
+.nav-link ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-link ul li {
+    padding: 1%;
+    width: 9vw;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 2px;
+}
+
+.nav-link ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 110%;
+    margin-left: 3%;
+    user-select: none;
+    text-transform: capitalize;
+    color: black;
+}
+
+.nav-link ul li:hover, .nav-link ul li a:hover {
+    background-color: gray;
+    font-weight: 400;
+    color: white;
+}
+
+.main-page {
+    margin-left: 8%;
+    padding-top: 20%;
+    font-size: 500%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.msg .alert {
+    width: 30%;
+    margin-left: 50%;
+    font-size: 15px;
+}
+
+/* addexpenses.html */
+
+.add-page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.add-page .header {                  
+    padding: 1%;
+    padding-top: 7%;
+    text-align: center;
+    font-size: 300%;
+    font-weight: 500;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.txt-box {
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 18px;
+    margin-left: 35%;
+}
+
+.add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-btn input[type="submit"] {
+    width: 7%;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0%;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.add-btn input[type="submit"]:hover {
+    background-color: rgba(0, 0, 255, 0.938);
+    color: black;
+}
+
+.txt-box input[type="number"], .date-feild {
+    width: 40%;
+    height: 25px;
+    padding: 10px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* vieewexpenses.html */
+
+.details {
+    width: 100vw;
+    height: 100vh;
+}
+
+.details .header {
+    padding: 1%;
+    padding-top: 7%;
+    text-align: center;
+    font-size: 300%;
+    font-weight: 500;
+    text-transform: capitalize;
+    user-select: none;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.432);
+    margin-left: 3%;
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.content-table th, .content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f302;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr:hover {
+    font-weight: bold;
+    color: #009879;
+}
